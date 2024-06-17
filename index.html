@@ -15,6 +15,14 @@
       align-items: center;
       min-height: 100vh;
       background-color: #f0f0f0;
+      flex-direction: column;
+    }
+    .header {
+      text-align: center;
+      font-family: 'Baloo Thambi', cursive;
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #333;
     }
     .content {
       text-align: center;
@@ -22,6 +30,8 @@
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 600px;
     }
     .content p {
       font-family: 'Baloo Thambi', cursive;
@@ -38,15 +48,40 @@
       border-radius: 10px;
       border: none;
     }
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    .buttons a {
+      text-decoration: none;
+      background: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .buttons a:hover {
+      background: #0056b3;
+    }
   </style>
 </head>
 <body>
+  <div class="header">
+    GMD WhisPro
+  </div>
   <div class="content">
-    <p>GMD WhisPro</p>
+    <p>Featured Video</p>
     <div class="video">
       <iframe src="https://www.youtube.com/embed/UVxSBn9k0Jg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <p>Don't forget to like, share, and subscribe!</p>
+    <div class="buttons">
+      <a href="https://whispro.github.io/button-1">Button 1</a>
+      <a href="https://whispro.github.io/button-2">Button 2</a>
+      <a href="https://whispro.github.io/button-3">Button 3</a>
+      <a href="https://whispro.github.io/button-4">Button 4</a>
+    </div>
   </div>
 </body>
 </html>
