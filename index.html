@@ -4,15 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GMD WhisPro</title>
-  <link rel="stylesheet" type="text/css" href="index.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato|Baloo+Thambi">
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+    }
+    .content {
+      text-align: center;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .content p {
+      font-family: 'Baloo Thambi', cursive;
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    .video {
+      margin: 20px 0;
+    }
+    .video iframe {
+      width: 100%;
+      height: 315px;
+      max-width: 560px;
+      border-radius: 10px;
+      border: none;
+    }
+  </style>
 </head>
 <body>
   <div class="content">
     <p>GMD WhisPro</p>
     <div class="video">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/UVxSBn9k0Jg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/UVxSBn9k0Jg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <p>Don't forget to like, share, and subscribe!</p>
   </div>
