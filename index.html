@@ -58,24 +58,45 @@
       width: 100%;
       max-width: 600px;
     }
-    .buttons a {
+    .button-large {
+      text-decoration: none;
+      background: #007BFF;
+      color: white;
+      padding: 20px;
+      border-radius: 5px;
+      transition: background 0.3s, transform 0.3s;
+      margin: 10px 0;
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+    }
+    .button-large:hover {
+      background: #0056b3;
+      transform: translateY(-2px);
+    }
+    .buttons-horizontal {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+    .buttons-horizontal a {
       text-decoration: none;
       background: #007BFF;
       color: white;
       padding: 15px 30px;
       border-radius: 5px;
       transition: background 0.3s, transform 0.3s;
-      margin: 10px 0;
-      width: 80%;
+      margin: 10px;
       text-align: center;
       font-size: 20px;
+      flex: 1;
     }
-    .buttons a:hover {
+    .buttons-horizontal a:hover {
       background: #0056b3;
       transform: translateY(-2px);
     }
     .moon-icon {
-      position: absolute;
+      position: fixed;
       bottom: 20px;
       right: 20px;
       cursor: pointer;
@@ -96,10 +117,10 @@
       background: #1e1e1e;
       box-shadow: 0 0 10px rgba(255,255,255,0.1);
     }
-    .dark-mode .buttons a {
+    .dark-mode .button-large, .dark-mode .buttons-horizontal a {
       background: #0056b3;
     }
-    .dark-mode .buttons a:hover {
+    .dark-mode .button-large:hover, .dark-mode .buttons-horizontal a:hover {
       background: #007BFF;
     }
   </style>
@@ -115,10 +136,12 @@
     </div>
     <p>Don't forget to like, share, and subscribe!</p>
     <div class="buttons">
-      <a href="https://whispro.github.io/button-1" style="font-size: 24px; width: 100%; padding: 20px;">Button 1</a>
-      <a href="https://whispro.github.io/button-2">Button 2</a>
-      <a href="https://whispro.github.io/button-3">Button 3</a>
-      <a href="https://whispro.github.io/button-4">Button 4</a>
+      <a class="button-large" href="https://whispro.github.io/button-1">Button 1</a>
+      <div class="buttons-horizontal">
+        <a href="https://whispro.github.io/button-2">Button 2</a>
+        <a href="https://whispro.github.io/button-3">Button 3</a>
+        <a href="https://whispro.github.io/button-4">Button 4</a>
+      </div>
     </div>
   </div>
   <div class="moon-icon" onclick="toggleDarkMode()">🌙</div>
