@@ -33,18 +33,67 @@
       cursor: pointer;
       margin: 20px 0;
     }
+    .upgrades {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .upgrade-button {
+      background-color: #ff1493;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 18px;
+      margin: 10px 0;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .upgrade-button:hover {
+      background-color: #ff69b4;
+    }
   </style>
 </head>
 <body>
   <div class="header">GMD WhisPro Clicker</div>
   <div class="clickable" onclick="incrementCounter()"></div>
   <div class="counter">Clicks: <span id="counter">0</span></div>
+  <div class="upgrades">
+    <button class="upgrade-button" onclick="buyDoubleClicks()">Buy Double Clicks (Cost: 50)</button>
+    <button class="upgrade-button" onclick="buyAutoClicker()">Buy Auto-Clicker (Cost: 100)</button>
+  </div>
 
   <script>
     let count = 0;
+    let clickValue = 1;
+    let autoClickerInterval;
+
     function incrementCounter() {
-      count++;
+      count += clickValue;
       document.getElementById('counter').textContent = count;
+    }
+
+    function buyDoubleClicks() {
+      if (count >= 50) {
+        count -= 50;
+        clickValue = 2;
+        document.getElementById('counter').textContent = count;
+      } else {
+        alert('Not enough clicks to buy this upgrade!');
+      }
+    }
+
+    function buyAutoClicker() {
+      if (count >= 100) {
+        count -= 100;
+        document.getElementById('counter').textContent = count;
+        if (!autoClickerInterval) {
+          autoClickerInterval = setInterval(incrementCounter, 1000);
+        }
+      } else {
+        alert('Not enough clicks to buy this upgrade!');
+      }
     }
   </script>
 </body>
